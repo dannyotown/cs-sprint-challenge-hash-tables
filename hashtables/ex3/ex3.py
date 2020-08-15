@@ -3,16 +3,19 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
-    return None
+    d = {}
+    for arr in arrays:
+        for item in arr:
+            if item not in d:
+                d[item] = 1
+            else:
+                d[item] += 1
+
+    result = [key for key in d if d[key] == len(arrays)]
+    return result
 
 
 if __name__ == "__main__":
-    arrays = []
-
-    arrays.append([[1, 2, 3],
-                   [1, 4, 5],
-                   [1, 6, 7]])
-    # arrays.append(list(range(2000000, 3000000)) + [1, 2, 3])
-    # arrays.append(list(range(3000000, 4000000)) + [1, 2, 3])
-
+    arrays = [[1, 2, 3],
+              [1, 4, 5, 3]]
     print(intersection(arrays))
