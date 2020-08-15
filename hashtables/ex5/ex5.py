@@ -1,14 +1,13 @@
 # Your code here
 
 
-
 def finder(files, queries):
     """
     YOUR CODE HERE
     """
     # Your code here
-
-    return result
+    print(files)
+    print(queries)
 
 
 if __name__ == "__main__":
